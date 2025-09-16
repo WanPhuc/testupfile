@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"]="Register";
+}
+<h2>Register</h2>
+<form asp-controller="Bai2" asp-action="Receive" method="post"onsubmit="return validateForm()">
+    <div>
+        <label>Username:</label>
+        <input type="text" name="username"required />
+    </div>
+    <div>
+        <label>Password:</label>
+        <input type="password"name="password" required  pattern="^(?=.*\d).{8,}$" 
+               title="Mật khẩu ít nhất 8 ký tự và chứa 1 chữ số"/>
+    </div>
+    <div>
+    
+    <label>Email:</label>
+    <input type="email" name="email" 
+           required 
+           pattern="^[^@@\\s]+@@[^@@\\s]+\.[a-zA-Z]{2,}$"
+           title="Email không hợp lệ (vd: abc@gmail.com)" />
+    </div>
+
+
+
+    <button type="submit">Register</button>
+</form>

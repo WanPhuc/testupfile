@@ -1,0 +1,16 @@
+@model List<int>
+
+@{
+    ViewData["Title"] = "Kết quả Random";
+}
+
+<h2>Các số random:</h2>
+
+<ul>
+    @foreach (var num in Model)
+    {
+        <li>@num</li>
+    }
+</ul>
+
+<a asp-controller="Bai2" asp-action="GetRandomNumbers">Quay lại nhập</a>

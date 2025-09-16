@@ -1,0 +1,10 @@
+@Model List<UserModel>;
+<h3>List of Users</h3>
+<ol>
+@foreach (var user in Model)
+{
+    <li>
+        Name: @user.Name - Password: @user.UserPassword
+    </li>
+}
+</ol>

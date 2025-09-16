@@ -1,0 +1,26 @@
+@{
+    ViewData["Title"] = "Nhập dữ liệu Random";
+}
+
+<h2>Nhập dữ liệu Random</h2>
+
+<form asp-controller="Bai2" asp-action="GetRandomNumbers" method="post">
+    <div>
+        <label>Lower bound:</label>
+        <input type="number" name="lb" required />
+    </div>
+    <div>
+        <label>Upper bound:</label>
+        <input type="number" name="ub" required />
+    </div>
+    <div>
+        <label>Số lượng n:</label>
+        <input type="number" name="n" required />
+    </div>
+    <button type="submit">Sinh số</button>
+</form>
+
+@if (ViewBag.Error != null)
+{
+    <p style="color:red">@ViewBag.Error</p>
+}
